@@ -7,6 +7,7 @@
   <meta name="theme-color" content="#0b1238">
   <meta name="description" content="Политика конфиденциальности Merge Blast 2048 / Merge Blast 2048 Privacy Policy">
   <meta name="robots" content="index,follow">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none';">
   <title>Merge Blast 2048 — Политика конфиденциальности</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%2310194a'/%3E%3Crect x='8' y='10' width='21' height='21' rx='6' fill='%2329c2dc'/%3E%3Crect x='35' y='10' width='21' height='21' rx='6' fill='%23558cf4'/%3E%3Crect x='22' y='36' width='21' height='21' rx='6' fill='%23b14ddd'/%3E%3Cpath d='M29 20h6m-3-3v6' stroke='white' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
   <style>
@@ -500,7 +501,7 @@
           <h2 id="contact-title" data-copy="contact-title">Контакты</h2>
           <p data-copy="contact-copy">По вопросам конфиденциальности свяжитесь с Merge Blast Team.</p>
         </div>
-                <a class="email-button" href="/cdn-cgi/l/email-protection#25554250565c4b4c4b13161d654248444c490b464a48"><span class="__cf_email__" data-cfemail="6f1f081a1c16010601595c572f08020e0603410c0002">[email&#160;protected]</span></a>
+        <a class="email-button" id="contact-email" href="#">pgusynin638 (gmail)</a>
       </section>
     </main>
 
@@ -509,7 +510,7 @@
     </footer>
   </div>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  <script>
     (() => {
       const copy = {
         ru: {
@@ -566,8 +567,14 @@
 
       const requested = location.hash.slice(1).toLowerCase();
       setLanguage(requested === 'en' ? 'en' : 'ru', false);
+
+      const mail = document.getElementById('contact-email');
+      if (mail) {
+        const address = ['pgusynin638', 'gmail.com'].join(String.fromCharCode(64));
+        mail.href = 'mailto:' + address;
+        mail.textContent = address;
+      }
     })();
   </script>
-<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a345ffeb5a4f3483',t:'MTc4ODI4Mzc5Mw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v3d52b47920f24c319d37e2661827c42b1787588026925" integrity="sha512-d9sL6GJLXn6fInD1+TVXhTcQOsmxeHfmHAvwGDIxp5TO+uo1fiWW7mHomMj4MLRlCsJDTqXzWLHJFFlPCEIj/A==" data-cf-beacon='{"version":"2024.11.0","token":"1954b47c125f43f8b4338b3c4f804e4f"}' crossorigin="anonymous"></script>
 </body>
 </html>
